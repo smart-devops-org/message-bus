@@ -1,11 +1,11 @@
 service:
   type: NodePort
   port: 80
-# yamlApplicationConfig:
-#   kafka:
-#     clusters:
-#       - name: local
-#         bootstrapServers: kkafka-controller-headless.messagebus.svc.cluster.local:9092
+yamlApplicationConfig:
+  kafka:
+    clusters:
+      - name: local
+        bootstrapServers: kkafka-controller-headless.messagebus.svc.cluster.local:9092
 # ingress:
 #   enabled: true
 #   ingressClassName: alb
@@ -26,3 +26,4 @@ service:
 #         number: 80
 #   hosts:
 #     - kafka-ui.smartseo.kr
+
