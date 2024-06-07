@@ -1,0 +1,9 @@
+kind: Kustomization
+namespace: messagebus
+helmCharts:
+  - name: kafka-ui
+    releaseName: kafka-ui
+    repo: https://provectus.github.io/kafka-ui-charts
+    version: 0.7.6
+    namespace: messagebus
+    valuesFile: values.yaml
