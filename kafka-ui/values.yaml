@@ -5,7 +5,7 @@ yamlApplicationConfig:
   kafka:
     clusters:
       - name: local
-        bootstrapServers: kkafka-controller-headless.messagebus.svc.cluster.local:9092
+        bootstrapServers: kafka-controller-headless.messagebus.svc.cluster.local:9092
 # ingress:
 #   enabled: true
 #   ingressClassName: alb
