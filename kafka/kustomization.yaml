@@ -1,0 +1,9 @@
+kind: Kustomization
+namespace: messagebus
+helmCharts:
+  - name: kafka
+    releaseName: kafka
+    repo: https://charts.bitnami.com/bitnami
+    version: 29.1.2
+    namespace: messagebus
+    valuesFile: values.yaml

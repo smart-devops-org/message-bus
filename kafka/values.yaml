@@ -1,0 +1,20 @@
+controller:
+  replicaCount: 1
+persistence:
+  storageClass: "ebs-sc"
+
+broker:
+  replicas: 1
+  storage:
+    size: 10Gi
+    storageClass: "ebs-sc"
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+  prometheusRule:
+    enabled: true
