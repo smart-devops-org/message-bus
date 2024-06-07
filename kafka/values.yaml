@@ -3,15 +3,22 @@ controller:
 persistence:
   storageClass: "ebs-sc"
 
+listeners:
+  client:
+    protocol: PLAINTEXT
+  controller:
+    protocol: PLAINTEXT
+  interbroker:
+    protocol: PLAINTEXT
+  external:
+    protocol: PLAINTEXT
+
 broker:
-  replicas: 1
-  storage:
-    size: 10Gi
+  replicaCount: 1
+  persistence:
+    enabled: true
     storageClass: "ebs-sc"
-  resources:
-    requests:
-      cpu: 100m
-      memory: 256Mi
+
 metrics:
   enabled: true
   serviceMonitor:
